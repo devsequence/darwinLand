@@ -1,0 +1,244 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  //font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: $Gilroy;
+  color: $primary;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+}
+.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+@media (min-width:992px){.container{max-width:100%;padding-left: 10px;padding-right: 10px;}}@media (min-width:1220px){.container{max-width:1190px}}
+h1, h2, h3, h4, h5, h6{
+  font-family: $Gilroy;
+}
+h1 {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+img {
+  display: block;
+  //width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+section {
+  position: relative;
+  padding: 40px 0;
+  z-index: 1;
+}
+
+.row.min {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.row.min > div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overflow {
+  overflow: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: transparent;
+  stroke: $secondary;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+span,
+.icon {
+  transition: all 150ms ease;
+}
+button{
+  cursor: pointer;
+}
+.wysiwyg{
+  font-size: 16px;
+  line-height: 24px;
+  color: $default;
+  p{
+    font-size: 16px;
+    line-height: 24px;
+    color: $default;
+    margin-bottom: 16px;
+  }
+}
+.title-section{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 110%;
+  color: $primary;
+}
+.btn-secondary, .btn-primary{
+  font-family: $Gilroy;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.btn-secondary{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  min-width: 135px;
+  transition: all ease 300ms;
+  &:hover{
+    background: $default;
+    border-color: $default;
+  }
+}
+.btn-primary{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 16px 32px 14px;
+  box-shadow: 0px 0px 20px rgba(187, 21, 35, 0.2);
+  border-radius: 36px;
+  background: $default;
+  border: 1px solid $default;
+  &:hover{
+    background: rgba($default, .9);
+    border-color: $default;
+  }
+}
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input{
+  display: inline-block;
+  font-family: $Gilroy;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 15px 24px 55px;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  &::-webkit-input-placeholder {
+    color: #FFFFFF;
+  }
+  &::-moz-placeholder {
+    color: #FFFFFF;
+  }
+  &:-moz-placeholder {
+    color: #FFFFFF;
+  }
+  &::-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+  &:-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+  //&:focus,
+  //&:active {
+  //  border-color: $default;
+  //}
+  //// invalid
+  //&:invalid {
+  //  box-shadow: none;
+  //}
+  //&:-moz-submit-invalid {
+  //  box-shadow: none;
+  //}
+  //&:-moz-ui-invalid {
+  //  box-shadow: none;
+  //}
+}
+.tab-item{
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  margin-top: 50px;
+  opacity: 0;
+  transition: margin-top 0.7s ease, opacity 0.4s ease;
+  &.active{
+    visibility: visible;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    opacity: 1;
+  }
+}
