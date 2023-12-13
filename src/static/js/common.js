@@ -22,6 +22,41 @@ $('.header-btn').on('click', function (e) {
     $this.toggleClass('active');
     $('.header').toggleClass('active');
 });
+$('.header-nav a, .hero-link a, .header-button a, .btn-info a, .definitely-list .btn-primary').on('click', function (e) {
+    e.preventDefault();
+    var ths = $(this);
+    var thsId = ths.data('id');
+    var headerHeight = $('.header').height();
+    $('html, body').animate({
+        scrollTop: $('.'+thsId).offset().top - headerHeight
+    }, 1000);
+    $('.header, .header-btn').removeClass('active');
+    return false;
+});
+
+$('.cookie-popup').addClass('hidden');
+$(function() {
+    var data = localStorage.getItem("cookies");
+    if (data !== null) {
+        $('.cookie-popup').addClass('hidden');
+        $("input[name='cookies']").attr("checked", "checked");
+    }else{
+        $('.cookie-popup').removeClass('hidden');
+    }
+});
+$('.cookie-popup-close').on('click', function (e) {
+    $("input[name='cookies']").trigger( "click" );
+});
+$("input[name='cookies']").click(function() {
+    if ($(this).is(":checked")) {
+        localStorage.setItem("cookies", $(this).val());
+        $('.cookie-popup').addClass('hidden');
+    } else {
+        localStorage.removeItem("cookies");
+        $('.cookie-popup').removeClass('hidden');
+    }
+});
+
 //
 // // $('.courses-item__text').each(function (e) {
 // //     var dots = "...";

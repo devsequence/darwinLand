@@ -263,7 +263,7 @@
                     </div>
                 </div>
                 <div class="info-form">
-                    <form action="#" class="info-form">
+                    <form action="#">
                         <label class="label user">
                             <svg class="icon">
                                 <use xlink:href="#ic-user"></use>
@@ -635,58 +635,71 @@
                 </div>
             </div>
         </section>
-        <section class="payment">
+        <section class="info info-form__page">
             <div class="container">
-                <div class="title-section">Вартість навчання</div>
-                <div class="payment-wrap">
-                    <div class="payment-item">
-                        <div class="payment-item__title">1 місяць</div>
-                        <div class="payment-item__info">
-                            <svg class="icon">
-                                <use xlink:href="#ic-clock"></use>
-                            </svg>
-                            <span>
-                                8 уроків / 10 год.
-                            </span>
-                        </div>
-                        <div class="payment-item__price">
-                            2 499 грн
-                        </div>
-                        <div class="payment-item__link">
-                            <a href="#" class="btn-primary">Оплатити</a>
-                        </div>
+                <div class="info-form__desc">
+                    <div class="info-form__title">
+                        Заповніть форму
+                        для зв’язку з менеджером
                     </div>
-                    <div class="payment-item">
-                        <div class="payment-item__media">
-                            <img src="../static/images/general/payment-img.png" alt="">
-                        </div>
-                        <div class="payment-item__free">
-                            <span>Вільних місць:</span>
-                            14
-                        </div>
+                    <div class="info-form__text">
+                        Наш менеджер вже чекає на ваші питання :) <br>
+                        Залиште заявку, щоб дізнатись подробиці.
                     </div>
-                    <div class="payment-item">
-                        <div class="payment-item__title">3 місяці*</div>
-                        <div class="payment-item__info">
+                </div>
+                <div class="info-form">
+                    <form action="#">
+                        <label class="label user">
                             <svg class="icon">
-                                <use xlink:href="#ic-clock"></use>
+                                <use xlink:href="#ic-user"></use>
                             </svg>
-                            <span>
-                                24 уроки / 30 год.
-                            </span>
+                            <input type="text" placeholder="Як вас звати?">
+                        </label>
+                        <label class="label phone">
+                            <svg class="icon">
+                                <use xlink:href="#ic-deviceMobile"></use>
+                            </svg>
+                            <input type="tel" placeholder="Телефон">
+                            <span>(будь ласка, вкажіть номер для спілкування у Viber/ Telegram)</span>
+                        </label>
+                        <label class="label email">
+                            <svg class="icon">
+                                <use xlink:href="#ic-envelopeSimpleOpen"></use>
+                            </svg>
+                            <input type="email" placeholder="Email">
+                        </label>
+                        <button class="btn-primary" type="submit">Отримати інформацію</button>
+                        <div class="modal-group">
+                            <input type="checkbox" id="checkbox-info" checked>
+                            <label class="label-checkbox" for="checkbox-info">
+                                Відправкою даної заявки я підтверджую, що я ознайомлений з
+                                <a href="#">Політика конфіденційності,</a> згоден з нею і приймаю її умови, включаючи ті, що стосуються регламентації обробки моїх персональних даних.
+                            </label>
                         </div>
-                        <div class="payment-item__price">
-                            6 897 грн
+                    </form>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-item__media">
+                                <img src="../static/images/general/info-img-1.svg" alt="info-img">
+                            </div>
+                            <div class="info-item__desc">
+                                <b>Старт</b>
+                                <span>Вересень, 2022</span>
+                            </div>
                         </div>
-                        <div class="payment-item__link">
-                            <a href="#" class="btn-primary">Оплатити</a>
+                        <div class="info-item">
+                            <div class="info-item__media">
+                                <img src="../static/images/general/info-img-2.svg" alt="info-img">
+                            </div>
+                            <div class="info-item__desc">
+                                <b>Вільних місць:</b>
+                                <span>Лишилось 14</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="payment-desc">
-                    <div class="payment-desc__title">Повна вартість курсу</div>
-                    <div class="payment-desc__price">7 497 грн</div>
-                    <div class="payment-desc__info">* <span>Заощаджуйте до 600 грн</span>, сплативши за 3 місяці одразу</div>
+                <div class="info-media">
+                    <img src="../static/images/general/hero-par-5.png" alt="">
                 </div>
             </div>
         </section>
